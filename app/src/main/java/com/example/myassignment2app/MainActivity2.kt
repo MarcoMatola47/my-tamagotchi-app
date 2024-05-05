@@ -37,31 +37,20 @@ class MainActivity2 : AppCompatActivity() {
 
         cleanButton.setOnClickListener {
             imageView.setImageResource(R.drawable.image2)
-
-        }
-        playButton.setOnClickListener {
-            imageView.setImageResource(R.drawable.image1)
-        }
-        FoodButton.setOnClickListener {
-            imageView.setImageResource(R.drawable.image3)
-        }
-
-
-        cleanButton.setOnClickListener {
             currentProgress= currentProgress+ 50;
             progressBar.setProgress(currentProgress)
         }
-
         playButton.setOnClickListener {
+            imageView.setImageResource(R.drawable.image1)
             currentProgress=currentProgress+50
             progressBar2.setProgress(currentProgress)
         }
-
         FoodButton.setOnClickListener {
+            imageView.setImageResource(R.drawable.image3)
             currentProgress=currentProgress-50
             progressBar3.setProgress(currentProgress)
-
         }
+
         Timer().schedule(object : TimerTask() {
             override fun run() {
                 runOnUiThread {
